@@ -1,12 +1,165 @@
-<!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+  <head>
+    <title>Hydrogen Bot | The wonderland on discord</title>
+    <link rel="icon" href="https://hydrogenbot.xyz/logo.png" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="og:title" content="Hydrogen Bot | The wonderland on discord">
+    <meta name="og:description" content="Hydrogen Bot is the most modern bot on discord, and is under constant update.">
+    <meta name="og:keywords" content="Hydrogen Studio, ">
+    <meta name="og:author" content="Hydrogen Studio, Hydrogen Bot, Hydrogen, hydrogenstudio.xyz, hydrotune, hydrobot, hydro">
+    <meta property="og:image" content="https://hydrogenbot.xyz/logo.png">
+    <meta property="og:url" content="https://hydrogenbot.xyz/">
+    <meta name="theme-color" content="#2a7dfa">
+  </head>
+  <body onload="bodyLoad()">
+    <div class="alert alert-primary" role="alert" style="position: fixed; top: 10px; width: 75%; right: 12.5%;" id="alert">
+      <center>Welcome to our new home design! <a target="_blank" href="https://hydrogenstudio.freshdesk.com/support/solutions/articles/63000155980-new-hydrogen-dashboard-design">Learn More   </a></center>
+</div>
+    <div style="background-color: #2C2F33;">
+    <div class="jumbotron text-center" style="background-color: #7289DA; color: #23272A; height: 100%;">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <center><a href="https://hydrogenbot.xyz"><img src="https://hydrogenbot.xyz/logo.png" style="border-radius: 50%;"></img></a></center>
+      <h1>Hydrogen Bot</h1>
+      <center><p id="stats"></p></center>
+      
+      <img src="https://static.thenounproject.com/png/512238-200.png" title="Scroll down to see more!"; height="50px" width="50px" style="position: absolute; bottom: 55px; right: 47.75%"></img>
 
-<p class="blurple">My First Heading</h1>
-<p>My first paragraph.</p>
+    </div>
 
-</body>
-</html>
+  
+
+    <div class="jumbotron text-center" style="background-color: #2C2F33;">
+        <h2>Over 75 Commands</h2>
+        <p>We have 75+ command ready for tasking, and they are updated every week.</p>
+        <button type="button" class="btn btn-primary" onclick="window.open('https://hydrogenbot.xyz/url/help')">Command List</button>
+    </div>
+    <hr />
+    <div class="jumbotron text-center" style="background-color: #2C2F33;">
+        <h2>Advanced Dashboard</h2>
+        <p>We have a dashboard for user to change bot's setting in their server.</p>
+        <button type="button" class="btn btn-primary" onclick="window.open('https://hydrogenbot.xyz/api/login')">Go to Dashboard</button>
+    </div>
+    <hr />
+    <div class="jumbotron text-center" style="background-color: #2C2F33;">
+      <h2>Global Chat</h2>
+      <p>Chat with over 30000 people in one channel.</p>
+      <button type="button" class="btn btn-primary" onclick="window.open('http://hydrogenbot.xyz/support?url=/support/solutions/articles/63000075206-how-do-i-get-started-with-global-chat')">Get Started</button>
+    </div>
+    <hr />
+    <div class="jumbotron text-center" style="background-color: #2C2F33;">
+        <h2>Ready to use?</h2>
+        <p>Invite to enter the wonderland.</p>
+        <button type="button" class="btn btn-primary" onclick="window.open('https://hydrogenbot.xyz/invite')">Invite Hydrogen</button>
+    </div>
+    <hr />
+    <div class="jumbotron text-center" style="background-color: #2C2F33;">
+      <h2>Need Help?</h2>
+      <p>Our support team is constantly active in our support desk and are ready to help you.</p>
+      <button type="button" class="btn btn-primary" onclick="window.open('https://hydrogenbot.xyz/support')">Contact Support</button>
+    </div>
+    </div>
+    <footer class="page-footer font-small" style="background-color: #7289DA;">
+      
+      <div class="footer-copyright text-center py-3">
+        <a href="https://hydrogenbot.xyz" style="color: white;"> &copy Hydrogen Bot | hydrogenbot.xyz | Hydrotune 2020, All Rights Reserved</a>
+      </div>
+    </footer>
+
+    <footer class="page-footer font-small" style="background-color: #7289DA;" id="footer">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+          <a href="https://hydrogenbot.xyz" style="color: white;"> &copy Hydrogen Bot | hydrogenbot.xyz | Hydrotune 2020, All Rights Reserved</a>
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+
+  </body>
+
+  <script>
+    function bodyLoad(){
+      $.get( "https://api.hydrogenbot.xyz/v1/botinfo", function( data ) {
+        document.getElementById('stats').innerHTML = 'Trusted by ' + data.usercount + ' users in ' + data.servercount + ' servers'
+      });
+
+      setTimeout(function(){
+        document.getElementById('alert').parentNode.removeChild(document.getElementById('alert')); 
+      }, 20000)
+    }
+  </script>
+
+  <style>
+      .jumbotron {
+        color: #99AAB5;
+        margin-top: auto;
+        margin-bottom: auto;
+        text-align: center;
+        font-family: Optima;
+      }
+      hr {
+        background-color: #7289DA;
+        color:#7289DA;
+      }
+      #footer {
+        position: fixed;
+        left: 
+        0;
+        bottom: 0;
+        width: 100%;  
+        background-color: red;
+        color: white;
+        text-align: center;
+        font-family: Optima;
+      }
+
+      h1 {
+        font-family: Optima;
+      }
+
+      h2 {
+        font-family: Optima;
+      }
+
+      h3 {
+        font-family: Optima;
+      }
+
+      h4 {
+        font-family: Optima;
+      }
+
+      h5 {
+        font-family: Optima;
+      }
+
+      h6 {
+        font-family: Optima;
+      }
+
+      button {
+        font-family: Perpetua;
+      }
+
+      p {
+        font-family: Perpetua;
+      }
+
+      a {
+        font-family: Perpetua;
+      }
+
+
+  </style>
